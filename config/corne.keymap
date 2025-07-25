@@ -5,9 +5,19 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -19,9 +29,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R          &kp T        &kp Y      &kp U      &kp I      &kp O    &kp P     &kp DELETE
+&kp TAB    &kp Q  &kp W  &kp E     &kp R          &kp T        &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F          &kp G        &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V          &kp B        &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESCAPE
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V          &kp B        &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                          &kp LGUI  &kp BACKSPACE  &lt 1 RET    &lt 2 DEL  &kp SPACE  &kp RALT
             >;
         };
@@ -58,11 +68,20 @@
 
         Control {
             bindings = <
-&kp TAB    &trans  &trans  &trans    &trans         &trans    &trans    &trans     &kp N8    &kp N9     &kp N0  &trans
-&trans     &trans  &trans  &trans    &trans         &trans    &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans    &trans         &trans    &trans    &trans     &trans    &trans     &trans  &trans
-                           &kp LGUI  &kp BACKSPACE  &trans    &trans    &kp SPACE  &kp RALT
+&kp TAB    &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6    &kp F7     &kp F8    &kp F9     &kp F10  &trans
+&trans     &kp F11     &kp F12       &trans        &trans         &trans          &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &trans   &trans
+&kp LSHFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &trans    &trans     &trans    &trans     &trans   &trans
+                                     &kp LGUI      &kp BACKSPACE  &trans          &trans    &kp SPACE  &kp RALT
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Combo {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
