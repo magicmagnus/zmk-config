@@ -46,6 +46,7 @@
             #binding-cells = <0>;
             bindings = <&kp LG(X) &kp R &kp E>;
             label = "SLEEP";
+            wait-ms = <200>;
         };
     };
 
