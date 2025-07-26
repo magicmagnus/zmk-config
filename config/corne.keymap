@@ -49,15 +49,17 @@
             wait-ms = <200>;
         };
 
-        euro_sign: euro_sign {
+        eurosign: euro_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press RIGHT_ALT>,
-                <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_8>,
+                <&macro_press>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_8>,
                 <&macro_release RIGHT_ALT>;
 
             label = "EURO_SIGN";
+            wait-ms = <100>;
         };
     };
 
@@ -102,7 +104,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT      &kp RBKT       &kp PIPE     &euro_sign      &kp LBRC              &kp RBRC               &kp DOLLAR     &kp CARET      &kp GRAVE
+&kp TAB           &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT      &kp RBKT       &kp PIPE     &eurosign       &kp LBRC              &kp RBRC               &kp DOLLAR     &kp CARET      &kp GRAVE
 &kp LEFT_CONTROL  &kp EXCL       &kp ASTERISK      &kp SLASH     &kp EQUAL      &kp MINUS    &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &kp SEMICOLON  &kp APOSTROPHE
 &kp LEFT_SHIFT    &kp TILDE      &kp PERCENT       &kp PLUS      &kp POUND      &kp AT       &kp UNDERSCORE  &kp COLON             &kp COMMA              &kp PERIOD     &kp QUESTION   &kp APOSTROPHE
                                                    &kp LEFT_GUI  &kp BACKSPACE  &trans       &trans          &kp SPACE             &kp RIGHT_ALT
