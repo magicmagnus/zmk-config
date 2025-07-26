@@ -53,9 +53,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_8>,
-                <&macro_release>;
+                <&macro_press RIGHT_ALT>,
+                <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_8>,
+                <&macro_release RIGHT_ALT>;
 
             label = "EURO_SIGN";
         };
