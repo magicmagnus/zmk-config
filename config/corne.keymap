@@ -16,6 +16,42 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
         };
+
+        ae_lower {
+            bindings = <&a_lower>;
+            key-positions = <13 3>;
+            layers = <0>;
+        };
+
+        oe_lower {
+            bindings = <&o_lower>;
+            key-positions = <9 3>;
+            layers = <0>;
+        };
+
+        ue_lower {
+            bindings = <&u_lower>;
+            key-positions = <7 3>;
+            layers = <0>;
+        };
+
+        ae_upper {
+            bindings = <&a_upper>;
+            key-positions = <13 3 35>;
+            layers = <0>;
+        };
+
+        oe_upper {
+            bindings = <&o_upper>;
+            key-positions = <9 3 24>;
+            layers = <0>;
+        };
+
+        ue_upper {
+            bindings = <&u_upper>;
+            key-positions = <7 3 24>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -273,10 +309,10 @@
 
         Control {
             bindings = <
-&kp TAB         &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6  &kp F7     &kp F8         &kp F9  &kp F10  &trans
-&trans          &kp F11     &kp F12       &trans        &trans         &trans          &trans  &trans     &trans         &trans  &trans   &trans
-&kp LEFT_SHIFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &trans  &trans     &trans         &trans  &trans   &trans
-                                          &kp LEFT_GUI  &kp BACKSPACE  &trans          &trans  &kp SPACE  &kp RIGHT_ALT
+&kp TAB         &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6    &kp F7     &kp F8         &kp F9   &kp F10  &trans
+&trans          &kp F11     &kp F12       &trans        &trans         &trans          &a_lower  &o_lower   &u_lower       &eszett  &trans   &trans
+&kp LEFT_SHIFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &a_upper  &o_upper   &u_upper       &trans   &trans   &trans
+                                          &kp LEFT_GUI  &kp BACKSPACE  &trans          &trans    &kp SPACE  &kp RIGHT_ALT
             >;
         };
     };
