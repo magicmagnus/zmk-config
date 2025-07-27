@@ -39,18 +39,21 @@
             bindings = <&a_upper>;
             key-positions = <13 3 35>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         oe_upper {
             bindings = <&o_upper>;
             key-positions = <9 3 24>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         ue_upper {
             bindings = <&u_upper>;
             key-positions = <7 3 24>;
             layers = <0>;
+            timeout-ms = <100>;
         };
     };
 
