@@ -12,27 +12,32 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
+        combo_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
         };
 
-        ae_lower {
-            bindings = <&a_umlaut>;
+        combo_ae_AE {
+            bindings = <&ae_AE>;
             key-positions = <13 3>;
             layers = <0>;
         };
 
-        oe_lower {
-            bindings = <&o_umlaut>;
+        combo_oe_OE {
+            bindings = <&oe_OE>;
             key-positions = <9 3>;
             layers = <0>;
         };
 
-        ue_lower {
-            bindings = <&u_umlaut>;
+        combo_ue_UE {
+            bindings = <&ue_UE>;
             key-positions = <7 3>;
             layers = <0>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
         };
     };
 
@@ -57,28 +62,28 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        a_umlaut: a_umlaut {
+        ae_AE: ae_AE {
             compatible = "zmk,behavior-mod-morph";
-            label = "A_UMLAUT";
-            bindings = <&a_lower>, <&a_upper>;
+            label = "AE_AE";
+            bindings = <&ae_lower>, <&ae_upper>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        o_umlaut: o_umlaut {
+        oe_OE: oe_OE {
             compatible = "zmk,behavior-mod-morph";
-            label = "O_UMLAUT";
-            bindings = <&o_lower>, <&o_upper>;
+            label = "OE_OE";
+            bindings = <&oe_lower>, <&oe_upper>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        u_umlaut: u_umlaut {
+        ue_UE: ue_UE {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_UMLAUT";
-            bindings = <&u_lower>, <&u_upper>;
+            label = "UE_UE";
+            bindings = <&ue_lower>, <&ue_upper>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -110,7 +115,7 @@
             label = "EUROSIGN";
         };
 
-        a_lower: a_lower {
+        ae_lower: a_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -126,7 +131,7 @@
             label = "A_LOWER";
         };
 
-        a_upper: a_upper {
+        ae_upper: a_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -142,7 +147,7 @@
             label = "A_UPPER";
         };
 
-        o_lower: o_lower {
+        oe_lower: o_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -158,7 +163,7 @@
             label = "O_LOWER";
         };
 
-        o_upper: o_upper {
+        oe_upper: o_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -174,7 +179,7 @@
             label = "O_UPPER";
         };
 
-        u_lower: u_lower {
+        ue_lower: u_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -190,7 +195,7 @@
             label = "U_LOWER";
         };
 
-        u_upper: u_upper {
+        ue_upper: u_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -273,10 +278,10 @@
 
         Control {
             bindings = <
-&kp TAB         &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6    &kp F7     &kp F8         &kp F9   &kp F10  &trans
-&trans          &kp F11     &kp F12       &trans        &trans         &trans          &a_lower  &o_lower   &u_lower       &eszett  &trans   &trans
-&kp LEFT_SHIFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &a_upper  &o_upper   &u_upper       &trans   &trans   &trans
-                                          &kp LEFT_GUI  &kp BACKSPACE  &trans          &trans    &kp SPACE  &kp RIGHT_ALT
+&kp TAB         &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6     &kp F7     &kp F8         &kp F9   &kp F10  &trans
+&trans          &kp F11     &kp F12       &trans        &trans         &trans          &ae_lower  &oe_lower  &ue_lower      &eszett  &trans   &trans
+&kp LEFT_SHIFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &ae_upper  &oe_upper  &ue_upper      &trans   &trans   &trans
+                                          &kp LEFT_GUI  &kp BACKSPACE  &trans          &trans     &kp SPACE  &kp RIGHT_ALT
             >;
         };
     };
