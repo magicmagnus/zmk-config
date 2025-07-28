@@ -18,42 +18,21 @@
         };
 
         ae_lower {
-            bindings = <&a_lower>;
+            bindings = <&a_umlaut>;
             key-positions = <13 3>;
             layers = <0>;
         };
 
         oe_lower {
-            bindings = <&o_lower>;
+            bindings = <&o_umlaut>;
             key-positions = <9 3>;
             layers = <0>;
         };
 
         ue_lower {
-            bindings = <&u_lower>;
+            bindings = <&u_umlaut>;
             key-positions = <7 3>;
             layers = <0>;
-        };
-
-        ae_upper {
-            bindings = <&a_upper>;
-            key-positions = <13 3 35>;
-            layers = <0>;
-            timeout-ms = <100>;
-        };
-
-        oe_upper {
-            bindings = <&o_upper>;
-            key-positions = <9 3 24>;
-            layers = <0>;
-            timeout-ms = <100>;
-        };
-
-        ue_upper {
-            bindings = <&u_upper>;
-            key-positions = <7 3 24>;
-            layers = <0>;
-            timeout-ms = <100>;
         };
     };
 
