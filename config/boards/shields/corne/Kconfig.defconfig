@@ -24,6 +24,9 @@ config ZMK_DISPLAY
 config ZMK_WIDGET_WPM_STATUS
     default y
 
+config ZMK_WIDGET_BONGO_CAT
+    default y
+
 endif
 
 if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
@@ -35,6 +38,9 @@ config ZMK_WIDGET_BATTERY_STATUS
     default y
 
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+    default y
+
+config ZMK_WIDGET_BONGO_CAT
     default y
 
 config ZMK_IDLE_TIMEOUT
