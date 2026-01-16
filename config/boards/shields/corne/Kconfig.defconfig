@@ -24,5 +24,29 @@ if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
 
 config ZMK_DISPLAY
 	default y
+
+config ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+    default y
+
+config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
+    default y
+
+config ZMK_WIDGET_BATTERY_STATUS
+    default y
+
+config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+    default y
+
+config ZMK_WIDGET_WPM_STATUS
+    default y
+
+config ZMK_IDLE_TIMEOUT
+    default 1200000
+
+config ZMK_SLEEP
+    default y
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 6000000
 	
 endif
