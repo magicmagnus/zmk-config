@@ -31,9 +31,6 @@ config ZMK_WIDGET_BATTERY_STATUS
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     default y
 
-config ZMK_WIDGET_WPM_STATUS
-    default y
-
 config ZMK_IDLE_TIMEOUT
     default 1200000
 
