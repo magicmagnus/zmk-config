@@ -25,12 +25,6 @@ if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
 config ZMK_DISPLAY
 	default y
 
-config ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-    default y
-
-config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-    default y
-
 config ZMK_WIDGET_BATTERY_STATUS
     default y
 
