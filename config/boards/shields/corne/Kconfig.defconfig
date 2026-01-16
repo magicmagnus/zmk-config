@@ -18,6 +18,12 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 7
 
+config ZMK_DISPLAY
+	default y
+
+config ZMK_WIDGET_WPM_STATUS
+    default y
+
 endif
 
 if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
