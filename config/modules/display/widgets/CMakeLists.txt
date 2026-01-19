@@ -1,2 +1,2 @@
 zephyr_library()
-zephyr_library_sources(layer_status.c)
+zephyr_library_sources(layer_status_custom.c)
