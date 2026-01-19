@@ -29,9 +29,8 @@ static struct zmk_widget_output_status output_status_widget;
 static struct zmk_widget_peripheral_status peripheral_status_widget;
 #endif
 
-#if IS_ENABLED(CONFIG_ZMK_WIDGET_LAYER_STATUS)
 static struct zmk_widget_layer_status_custom layer_status_widget;
-#endif
+
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_WPM_STATUS)
 static struct zmk_widget_wpm_status wpm_status_widget;
@@ -57,12 +56,11 @@ lv_obj_t *zmk_display_status_screen() {
                  0);
 #endif
 
-#if IS_ENABLED(CONFIG_ZMK_WIDGET_LAYER_STATUS)
-    zmk_widget_layer_status_custom_init(&layer_status_widget, screen);
-    lv_obj_set_style_text_font(zmk_widget_layer_status_custom_obj(&layer_status_widget),
-                               lv_theme_get_font_small(screen), LV_PART_MAIN);
-    lv_obj_align(zmk_widget_layer_status_custom_obj(&layer_status_widget), LV_ALIGN_BOTTOM_LEFT, 0, 0);
-#endif
+zmk_widget_layer_status_custom_init(&layer_status_widget, screen);
+lv_obj_set_style_text_font(zmk_widget_layer_status_custom_obj(&layer_status_widget),
+                           lv_theme_get_font_small(screen), LV_PART_MAIN);
+lv_obj_align(zmk_widget_layer_status_custom_obj(&layer_status_widget), LV_ALIGN_BOTTOM_LEFT, 0, 0);
+
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_WPM_STATUS)
     zmk_widget_wpm_status_init(&wpm_status_widget, screen);
