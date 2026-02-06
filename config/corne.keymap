@@ -93,6 +93,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ae_AE_linux: ae_AE_linux {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AE_AE_LINUX";
+            bindings = <&ae_lower_linux>, <&ae_upper_linux>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        oe_OE_linux: oe_OE_linux {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OE_OE_LINUX";
+            bindings = <&oe_lower_linux>, <&oe_upper_linux>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ue_UE_linux: ue_UE_linux {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UE_UE_LINUX";
+            bindings = <&ue_lower_linux>, <&ue_upper_linux>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -245,6 +272,76 @@
 
             label = "LEFTALT_SPACE";
         };
+
+        ae_lower_linux: ae_lower_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp E &kp NUMBER_4 &kp SPACE>;
+
+            label = "AE_LOWER_LINUX";
+        };
+
+        ae_upper_linux: ae_upper_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp C &kp NUMBER_4 &kp SPACE>;
+
+            label = "AE_UPPER_LINUX";
+        };
+
+        oe_lower_linux: oe_lower_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp F &kp NUMBER_4 &kp SPACE>;
+
+            label = "OE_LOWER_LINUX";
+        };
+
+        oe_upper_linux: oe_upper_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp D &kp NUMBER_4 &kp SPACE>;
+
+            label = "OE_UPPER_LINUX";
+        };
+
+        ue_lower_linux: ue_lower_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp F &kp C &kp SPACE>;
+
+            label = "UE_LOWER_LINUX";
+        };
+
+        ue_upper_linux: ue_upper_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp D &kp C &kp SPACE>;
+
+            label = "UE_UPPER_LINUX";
+        };
+
+        eszett_linux: eszett_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LC(U)) &kp NUMBER_0 &kp N0 &kp D &kp F &kp SPACE>;
+
+            label = "ESZETT_LINUX";
+        };
     };
 
     keymap {
@@ -306,10 +403,10 @@
 
         LinuxMacros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp L   &kp I   &kp N   &kp U   &kp X
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 5
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &ae_AE_linux  &oe_OE_linux  &ue_UE_linux  &eszett_linux  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans         &tog 5
+                        &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
 
