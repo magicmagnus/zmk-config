@@ -283,6 +283,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp E &kp NUMBER_4 &kp SPACE>;
                 
@@ -298,6 +299,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp C &kp NUMBER_4 &kp SPACE>;
                 
@@ -313,6 +315,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp NUMBER_6 &kp SPACE>;
                 
@@ -328,6 +331,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp NUMBER_4 &kp SPACE>;
                 
@@ -343,6 +347,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp C &kp SPACE>;
                 
@@ -358,6 +363,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp C &kp SPACE>;
                 
@@ -374,6 +380,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp F &kp SPACE>;
 
