@@ -396,17 +396,17 @@
             bindings = <
 &kp TAB  &kp F1      &kp F2        &kp F3        &kp F4         &kp F5          &kp F6     &kp F7     &kp F8         &kp F9   &kp F10  &trans
 &trans   &kp F11     &kp F12       &trans        &trans         &trans          &ae_lower  &oe_lower  &ue_lower      &eszett  &trans   &trans
-&trans   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &ae_upper  &oe_upper  &ue_upper      &trans   &trans   &tog 5
+&trans   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &ae_upper  &oe_upper  &ue_upper      &trans   &tog 5   &tog 5
                                    &kp LEFT_GUI  &kp BACKSPACE  &trans          &trans     &kp SPACE  &kp RIGHT_ALT
             >;
         };
 
         LinuxMacros {
             bindings = <
-&ae_AE_linux  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &oe_OE_linux
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &ue_UE_linux
-                              &trans  &trans  &trans    &trans  &trans  &trans
+&ae_AE_linux  &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &oe_OE_linux
+&trans        &trans  &eszett_linux  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &ue_UE_linux
+                                     &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -429,7 +429,7 @@
         };
 
         ActivateLinuxMacros {
-            if-layers = <0 5>;
+            if-layers = <5 3>;
             then-layer = <4>;
         };
     };
