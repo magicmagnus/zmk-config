@@ -285,7 +285,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp E &kp NUMBER_4 &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp E &kp NUMBER_4 &kp ENTER>;
                 
             label = "A_LOWER_LINUX";
         };
@@ -301,7 +301,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp C &kp NUMBER_4 &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp C &kp NUMBER_4 &kp ENTER>;
                 
             label = "A_UPPER_LINUX";
         };
@@ -317,7 +317,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp NUMBER_6 &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp NUMBER_6 &kp ENTER>;
                 
             label = "O_LOWER_LINUX";
         };
@@ -333,7 +333,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp NUMBER_4 &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp NUMBER_4 &kp ENTER>;
                 
             label = "O_UPPER_LINUX";
         };
@@ -349,7 +349,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp C &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp C &kp ENTER>;
                 
             label = "U_LOWER_LINUX";
         };
@@ -365,7 +365,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp C &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp C &kp ENTER>;
                 
             label = "U_UPPER_LINUX";
         };
@@ -382,7 +382,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp F &kp SPACE>;
+                <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp F &kp ENTER>;
 
             label = "ESZETT_LINUX";
         };
