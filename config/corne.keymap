@@ -100,7 +100,7 @@
             bindings = <&ae_lower_linux>, <&ae_upper_linux>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
         };
 
         oe_OE_linux: oe_OE_linux {
@@ -109,7 +109,7 @@
             bindings = <&oe_lower_linux>, <&oe_upper_linux>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_RGUI|MOD_LGUI)>;
         };
 
         ue_UE_linux: ue_UE_linux {
@@ -118,7 +118,7 @@
             bindings = <&ue_lower_linux>, <&ue_upper_linux>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
         };
     };
 
@@ -273,7 +273,6 @@
             label = "LEFTALT_SPACE";
         };
 
-
         ae_lower_linux: ae_lower_linux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -286,7 +285,7 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp E &kp NUMBER_4 &kp ENTER>;
-                
+
             label = "A_LOWER_LINUX";
         };
 
@@ -302,10 +301,10 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp C &kp NUMBER_4 &kp ENTER>;
-                
+
             label = "A_UPPER_LINUX";
         };
-       
+
         oe_lower_linux: oe_lower_linux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -318,7 +317,7 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp NUMBER_6 &kp ENTER>;
-                
+
             label = "O_LOWER_LINUX";
         };
 
@@ -334,7 +333,7 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp NUMBER_4 &kp ENTER>;
-                
+
             label = "O_UPPER_LINUX";
         };
 
@@ -350,7 +349,7 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp F &kp C &kp ENTER>;
-                
+
             label = "U_LOWER_LINUX";
         };
 
@@ -366,10 +365,9 @@
                 <&kp LCTRL &kp LSHIFT &kp U>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_0 &kp D &kp C &kp ENTER>;
-                
+
             label = "U_UPPER_LINUX";
         };
-        
 
         eszett_linux: eszett_linux {
             compatible = "zmk,behavior-macro";
@@ -474,6 +472,11 @@
 
         ActivateLinuxMacros {
             if-layers = <5 3>;
+            then-layer = <4>;
+        };
+
+        ActivateLinuxMacrosBase {
+            if-layers = <5 0>;
             then-layer = <4>;
         };
     };
