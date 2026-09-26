@@ -1,0 +1,21 @@
+name: Draw ZMK keymaps
+
+on:
+  workflow_dispatch:           # "Run workflow" button in the Actions tab
+  push:
+    paths:
+      - "config/*.keymap"
+      - "config/west.yml"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write          # lets the workflow commit the SVG back to the repo
+    with:
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      west_config_path: "config"   # fetches zmk-helpers from west.yml so includes resolve
+      amend_commit: false          # add a separate commit instead of rewriting yours
