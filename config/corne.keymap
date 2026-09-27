@@ -134,6 +134,10 @@ ZMK_COMBO(c_ae_lnx,     &ae_lnx,        13 3, LNX)
 ZMK_COMBO(c_oe_lnx,     &oe_lnx,         9 3, LNX)
 ZMK_COMBO(c_ue_lnx,     &ue_lnx,         7 3, LNX)
 
+ZMK_COMBO(c_sz_mac,     MAC_ESZETT,     14 25, MAC)     /* S + Z = ß */
+ZMK_COMBO(c_sz_win,     &win_eszett,    14 25, WIN)
+ZMK_COMBO(c_sz_lnx,     &lnx_eszett,    14 25, LNX)
+
 ZMK_COMBO(launch_mac,   &kp LG(SPACE),  37 40, MAC)     /* Spotlight */
 ZMK_COMBO(launch_other, &kp LA(SPACE),  37 40, WIN LNX)
 
@@ -154,25 +158,25 @@ ZMK_CONDITIONAL_LAYER(lnx_control, NUM SYM LNX, LNX_CTRL)
 
 /* 0: Base (Mac umlauts) */
 ZMK_LAYER(Base,
-&ae_mac     &kp Q  &kp W  &kp E     &kp R            &kp T            &kp Y          &kp U      &kp I      &kp O    &kp P     &oe_mac
+&ae_mac     &kp Q  &kp W  &kp E     &kp R            &kp T            &kp Y          &kp U      &kp I      &kp O    &kp P     &ue_mac
 &kp LSHIFT  &kp A  &kp S  &kp D     &kp F            &kp G            &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V            &kp B            &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &ue_mac
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V            &kp B            &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &oe_mac
                           &kp LGUI  &mt LSHIFT BSPC  &lt NUM ENTER    &lt SYM DEL    &kp SPACE  &kp RALT
 )
 
 /* 1: Windows overlay for Base (also the Windows mode flag) */
 ZMK_LAYER(WinBase,
-&ae_win  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_win
+&ae_win  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &ue_win
 ___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
-___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &ue_win
+___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_win
                    ___  ___  ___    ___  ___  ___
 )
 
 /* 2: Linux overlay for Base (also the Linux mode flag) */
 ZMK_LAYER(LinuxBase,
-&ae_lnx  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_lnx
+&ae_lnx  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &ue_lnx
 ___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
-___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &ue_lnx
+___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_lnx
                    ___  ___  ___    ___  ___  ___
 )
 
