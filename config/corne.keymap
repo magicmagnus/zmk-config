@@ -180,7 +180,7 @@ ___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_lnx
                    ___  ___  ___    ___  ___  ___
 )
 
-/* 3: NumNav (Mac): word jump on U/O, line start/end on H/;, screenshot bottom right */
+/* 3: NumNav (Mac): word jump on U/O, line start/end on H/;, screenshot bottom left */
 ZMK_LAYER(NumNav,
 ___         ___     &kp N4  &kp N5    &kp N6    &kp C_PREV    ___             MAC_WORD_LEFT  &kp UP     MAC_WORD_RIGHT  ___           MAC_LOCK
 ___         &kp N0  &kp N1  &kp N2    &kp N3    &kp C_PP      MAC_LINE_START  &kp LEFT       &kp DOWN   &kp RIGHT       MAC_LINE_END  ___

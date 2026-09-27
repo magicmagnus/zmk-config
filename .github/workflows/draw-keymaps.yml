@@ -1,21 +1,51 @@
 name: Draw ZMK keymaps
 
 on:
-  workflow_dispatch:           # "Run workflow" button in the Actions tab
+  workflow_dispatch:           # "Run workflow" button (select this workflow in the Actions sidebar)
   push:
     paths:
       - "config/*.keymap"
       - "config/west.yml"
       - "keymap_drawer.config.yaml"
+      - ".github/workflows/draw-keymaps.yml"
+
+permissions:
+  contents: write              # lets the workflow commit the SVGs back to the repo
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    permissions:
-      contents: write          # lets the workflow commit the SVG back to the repo
-    with:
-      keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: "keymap-drawer"
-      west_config_path: "config"   # fetches zmk-helpers from west.yml so includes resolve
-      amend_commit: false          # add a separate commit instead of rewriting yours
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install keymap-drawer and west
+        run: |
+          pipx install keymap-drawer
+          pipx install west
+
+      - name: Fetch modules from west.yml (zmk-helpers)
+        run: |
+          west init -l config
+          west config --local manifest.project-filter " -zmk,-zephyr"
+          west update --fetch-opt=--filter=tree:0
+
+      - name: Parse keymap and draw both versions
+        run: |
+          mkdir -p keymap-drawer
+          CFG="-c keymap_drawer.config.yaml"
+
+          # Parse once
+          keymap $CFG parse -z config/corne.keymap > keymap-drawer/corne.yaml
+
+          # 1) Everything, including the Win/Linux overlays
+          keymap $CFG draw keymap-drawer/corne.yaml > keymap-drawer/corne.svg
+
+          # 2) Main layers only
+          keymap $CFG draw keymap-drawer/corne.yaml \
+            -s Base NumNav Symbols Control > keymap-drawer/corne_main.svg
+
+      - name: Commit drawings
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          file_pattern: "keymap-drawer/*.svg keymap-drawer/*.yaml"
+          commit_message: "keymap-drawer render"
