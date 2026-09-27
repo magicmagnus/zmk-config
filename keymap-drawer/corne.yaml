@@ -154,7 +154,7 @@ layers:
   - RIGHT
   - Line end
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Screenshot
   - {t: ▽, type: trans}
   - '7'
   - '8'
@@ -165,7 +165,7 @@ layers:
   - ','
   - .
   - MUTE
-  - Screenshot
+  - {t: ▽, type: trans}
   - ⌘ Cmd
   - BSPC
   - {type: held}
