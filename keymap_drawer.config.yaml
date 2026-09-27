@@ -146,4 +146,4 @@ parse_config:
     special_combinations: {}
 
 draw_config:
-  dark_mode: false   # always light; "auto" follows the viewer's dark mode
+  dark_mode: true   # always dark; "auto" follows the viewer's dark mode
