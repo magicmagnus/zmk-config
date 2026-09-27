@@ -180,11 +180,11 @@ ___      ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  &oe_lnx
                    ___  ___  ___    ___  ___  ___
 )
 
-/* 3: NumNav (Mac): word jump on U/O, line start/end on H/;, screenshot bottom left */
+/* 3: NumNav (Mac): word jump on U/O, line start/end on H/;, screenshot top left */
 ZMK_LAYER(NumNav,
-SCREENSHOT         ___     &kp N4  &kp N5    &kp N6    &kp C_PREV    ___             MAC_WORD_LEFT  &kp UP     MAC_WORD_RIGHT  ___           MAC_LOCK
-___         &kp N0  &kp N1  &kp N2    &kp N3    &kp C_PP      MAC_LINE_START  &kp LEFT       &kp DOWN   &kp RIGHT       MAC_LINE_END  ___
-___  ___     &kp N7  &kp N8    &kp N9    &kp C_NEXT    &kp C_VOL_DN    &kp C_VOL_UP   &kp COMMA  &kp DOT         &kp C_MUTE    ___
+SCREENSHOT  ___     &kp N4  &kp N5    &kp N6    &kp C_PREV    ___             MAC_WORD_LEFT  &kp UP     MAC_WORD_RIGHT  ___           MAC_LOCK
+&kp LSHIFT  &kp N0  &kp N1  &kp N2    &kp N3    &kp C_PP      MAC_LINE_START  &kp LEFT       &kp DOWN   &kp RIGHT       MAC_LINE_END  ___
+&kp LCTRL   ___     &kp N7  &kp N8    &kp N9    &kp C_NEXT    &kp C_VOL_DN    &kp C_VOL_UP   &kp COMMA  &kp DOT         &kp C_MUTE    ___
                             &kp LGUI  &kp BSPC  ___           ___             &kp SPACE      &kp RALT
 )
 
@@ -206,9 +206,9 @@ ___  ___  ___  ___  ___  ___    ___       ___           ___  ___            ___ 
 
 /* 6: Symbols (euro = Mac version) */
 ZMK_LAYER(Symbols,
-___  &kp AT     &kp LT     &kp GT     &kp BSLH   &kp PIPE     MAC_EURO    &kp LBRC   &kp RBRC   &kp DLLR  &kp CARET  &kp GRAVE
-___  &kp EXCL   &kp STAR   &kp SLASH  &kp EQUAL  &kp MINUS    &kp LBKT    &kp LPAR   &kp RPAR   &kp RBKT  &kp SEMI   &kp SQT
-___  &kp TILDE  &kp PRCNT  &kp PLUS   &kp HASH   &kp AMPS     &kp UNDER   &kp SPACE  &kp COMMA  &kp DOT   &kp QMARK  ___
+___         &kp AT     &kp LT     &kp GT     &kp BSLH   &kp PIPE     MAC_EURO    &kp LBRC   &kp RBRC   &kp DLLR  &kp CARET  &kp GRAVE
+&kp LSHIFT  &kp EXCL   &kp STAR   &kp SLASH  &kp EQUAL  &kp MINUS    &kp LBKT    &kp LPAR   &kp RPAR   &kp RBKT  &kp SEMI   &kp SQT
+&kp LCTRL   &kp TILDE  &kp PRCNT  &kp PLUS   &kp HASH   &kp AMPS     &kp UNDER   &kp SPACE  &kp COMMA  &kp DOT   &kp QMARK  ___
                            &kp LGUI   &kp BSPC   ___          ___         &kp SPACE  &kp RALT
 )
 
