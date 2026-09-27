@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NumNav:
-  - {t: ▽, type: trans}
+  - Screenshot
   - {t: ▽, type: trans}
   - '4'
   - '5'
@@ -154,7 +154,7 @@ layers:
   - RIGHT
   - Line end
   - {t: ▽, type: trans}
-  - Screenshot
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '7'
   - '8'
