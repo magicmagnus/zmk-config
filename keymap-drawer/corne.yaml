@@ -142,7 +142,7 @@ layers:
   - Word →
   - {t: ▽, type: trans}
   - Lock
-  - {t: ▽, type: trans}
+  - ⇧ Shift
   - '0'
   - '1'
   - '2'
@@ -154,7 +154,7 @@ layers:
   - RIGHT
   - Line end
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⌃ Ctrl
   - {t: ▽, type: trans}
   - '7'
   - '8'
@@ -271,7 +271,7 @@ layers:
   - $
   - ^
   - '`'
-  - {t: ▽, type: trans}
+  - ⇧ Shift
   - '!'
   - '*'
   - /
@@ -283,7 +283,7 @@ layers:
   - ']'
   - ;
   - ''''
-  - {t: ▽, type: trans}
+  - ⌃ Ctrl
   - '~'
   - '%'
   - +
