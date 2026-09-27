@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - ö Ö
-  - LSHIFT
+  - ü Ü
+  - ⇧ Shift
   - A
   - S
   - D
@@ -25,7 +25,7 @@ layers:
   - L
   - ;
   - ''''
-  - LCTRL
+  - ⌃ Ctrl
   - Z
   - X
   - C
@@ -36,13 +36,13 @@ layers:
   - ','
   - .
   - /
-  - ü Ü
-  - LGUI
-  - {t: BSPC, h: LSHIFT}
+  - ö Ö
+  - ⌘ Cmd
+  - {t: BSPC, h: ⇧ Shift}
   - {t: ENTER, h: NumNav}
   - {t: DEL, h: Symbols}
   - SPACE
-  - RALT
+  - ⌥ Opt
   WinBase:
   - ä Ä (Win)
   - {t: ▽, type: trans}
@@ -55,31 +55,31 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ö Ö (Win)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - ü Ü (Win)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ö Ö (Win)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -98,31 +98,31 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ö Ö (Lnx)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - ü Ü (Lnx)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ö Ö (Lnx)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -166,12 +166,12 @@ layers:
   - .
   - MUTE
   - Screenshot
-  - LGUI
+  - ⌘ Cmd
   - BSPC
   - {type: held}
   - {t: ▽, type: trans}
   - SPACE
-  - RALT
+  - ⌥ Opt
   WinNumNav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -295,12 +295,12 @@ layers:
   - .
   - '?'
   - {t: ▽, type: trans}
-  - LGUI
+  - ⌘ Cmd
   - BSPC
   - {t: ▽, type: trans}
   - {type: held}
   - SPACE
-  - RALT
+  - ⌥ Opt
   WinSymbols:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -424,12 +424,12 @@ layers:
   - 'Mode: Mac'
   - 'Mode: Win'
   - 'Mode: Linux'
-  - LGUI
+  - ⌘ Cmd
   - BSPC
   - {type: held}
   - {type: held}
   - SPACE
-  - RALT
+  - ⌥ Opt
   WinControl:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -550,9 +550,18 @@ combos:
 - p: [7, 3]
   k: ü Ü (Lnx)
   l: [LinuxBase]
+- p: [14, 25]
+  k: ß
+  l: [Base]
+- p: [14, 25]
+  k: ß
+  l: [WinBase]
+- p: [14, 25]
+  k: ß
+  l: [LinuxBase]
 - p: [37, 40]
-  k: Gui+SPACE
+  k: ⌘ SPACE
   l: [Base]
 - p: [37, 40]
-  k: Alt+SPACE
+  k: ⌥ SPACE
   l: [WinBase, LinuxBase]
