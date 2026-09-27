@@ -44,6 +44,33 @@ jobs:
           keymap $CFG draw keymap-drawer/corne.yaml \
             -s Base NumNav Symbols Control > keymap-drawer/corne_main.svg
 
+      - name: Inline CSS so Affinity/Illustrator show the colors
+        run: |
+          npm install -g svgo
+          cat > /tmp/svgo.config.mjs <<'CFG'
+          export default {
+            multipass: false,
+            plugins: [
+              { name: 'inlineStyles', params: { onlyMatchedOnce: false, removeMatchedSelectors: true } },
+              'convertStyleToAttrs',
+            ],
+          };
+          CFG
+          svgo --config /tmp/svgo.config.mjs keymap-drawer/corne.svg keymap-drawer/corne_main.svg
+
+      - name: Add a solid background
+        env:
+          BG: "#0d1117"          # dark background; change to taste (e.g. "#ffffff" for light)
+        run: |
+          python3 - <<'PY'
+          import os, re
+          bg = os.environ["BG"]
+          for f in ["keymap-drawer/corne.svg", "keymap-drawer/corne_main.svg"]:
+              s = open(f).read()
+              s = re.sub(r"(<svg\b[^>]*>)", r'\1<rect width="100%" height="100%" fill="' + bg + '"/>', s, count=1)
+              open(f, "w").write(s)
+          PY
+
       - name: Commit drawings
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
